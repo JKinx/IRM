@@ -695,12 +695,12 @@ class model(object):
     def sample_gibbs(self, num_iters):
         """Run num_iters gibbs sampling scans."""
         for i in range(num_iters):
-            a.gibbs_scan(False, None, None)
+            self.gibbs_scan(False, None, None)
     
     def sample_restr(self, num_iters, objs, type_opts):
         """Run num_ites restricted gibbs sampling scans."""
         for i in range(num_iters):
-            a.gibbs_scan(True, objs, type_opts)
+            self.gibbs_scan(True, objs, type_opts)
 
     def sample_climb(self, num_iter):
         """Sample using hillclimbing with random restarts"""
